@@ -17,4 +17,4 @@ app.get("/", (req, res) => {
   res.send("Welcome to Full Stack Development!");
 });
 
-app.listen(4000);
+app.listen(process.env.PORT || 4000);
