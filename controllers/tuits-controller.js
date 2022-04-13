@@ -20,13 +20,13 @@ const updateTuit = async (req, res) => {
   const tuitdIdToUpdate = req.params.tid;
   const updatedTuit = req.body;
   const status = await updateTuitDao(tuitdIdToUpdate, updatedTuit);
-  res.sendStatus(status);
+  res.send(status);
 };
 
 const deleteTuit = async (req, res) => {
   const tuitdIdToDelete = req.params.tid;
   const status = await deleteTuitDao(tuitdIdToDelete);
-  res.sendStatus(status);
+  res.send(status);
 };
 
 export default (app) => {
